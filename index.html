@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Подключаю палитру цветов---------------------------------------------------------->
+  <script src="http://yui.yahooapis.com/2.9.0/build/utilities/utilities.js" ></script>
+  <script src="http://yui.yahooapis.com/2.9.0/build/slider/slider-min.js" ></script>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/colorpicker/assets/skins/sam/colorpicker.css">
+
+  <!--Скрипт для функции drag&drop ----------------------------------------------------------------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js" integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!------шрифты------------------------------------------------------------------------------------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-----файл со стилями---------------------------------------------------------------------------->
+  <link rel="stylesheet" href="style.css">
+  <title>Color Picker</title>
+</head>
+<body>
+  <div class="container">
+    <div class="color__tablition">
+      <div class="color__tablition_ttl">Таблица цветов</div>
+      <div class="save-and-close__block">
+        <div class="color__tablition_save">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 4.49323V14H1V1H10.1985L14 4.49323ZM10.5882 0L15 4.05405V15H0V0H10.5882Z" fill="#8D8D8D"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 10H4V14H11V10ZM3 9V15H12V9H3Z" fill="#8D8D8D"/>
+          </svg>
+        </div>
+       <div class="color__tablition_close">
+        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="1.06064" height="11.6671" transform="matrix(0.707115 0.707099 -0.707115 0.707099 8.25 0)" fill="#777777"/>
+          <rect width="1.06064" height="11.6671" transform="matrix(-0.707114 0.707099 -0.707114 -0.707099 8.99988 8.25)" fill="#777777"/>
+        </svg>
+       </div>
+      </div>
+      <div class="color__tablition_block">
+        <div class="color__tablition_values">
+          <div class="color__tablition_values-item color">Цвет</div>
+          <div class="color__tablition_values-item name">Название</div>
+          <div class="color__tablition_values-item type">Тип</div>
+          <div class="color__tablition_values-item colorCode">Код</div>
+          <div class="color__tablition_values-item change">Изменить</div>
+          <div class="color__tablition_values-item delete">Удалить</div>
+        </div>
+        <div class="color__tablition-items"></div>
+      </div>
+      <div class="color__tablition_btn">
+        <button>Добавить цвет</button>
+      </div>
+    </div>
+    <div class="color__selector_wrp">
+      <div class="color__selector">
+        <div class="color__selector_ttl">Добавление цвета</div>
+        <form>
+          <div class="color__selector_name">
+            <span>Название цвета </span>
+            <input type="text" placeholder="Введите название">
+          </div>
+          <div class="color__selector_type">
+            <span>Выберите тип</span>
+            <div class="type__selector">
+              <div class="type__selector-vector"><span></span></div>
+              <div class="type__selector-item selected">Main</div>
+              <div class="type__selector-item">Primary</div>
+              <div class="type__selector-item">Secondary</div>
+              <div class="type__selector-item">Base</div>
+            </div>
+          </div>
+          <div class="color__selector_color" id="color__picker"></div>
+          <div class="color__selector_btn-wrapper"><button type="submit" class="color__selector_btn">Добавить</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="http://yui.yahooapis.com/2.9.0/build/colorpicker/colorpicker-min.js" ></script>
+
+  <!-- Взял отсюда https://yui.github.io/yui2/docs/yui_2.9.0_full/colorpicker/index.html -->
+  <script>
+    var picker = new YAHOO.widget.ColorPicker("color__picker", {
+      showhsvcontrols: false,
+      showhexcontrols: true,
+      images: {
+        PICKER_THUMB: "img/picker_thumb.svg",
+        HUE_THUMB: "img/hue_thumb.svg"
+      }
+    });
+  </script>
+  <script>
+    const dragArea = document.querySelector('.color__tablition-items');
+    new Sortable(dragArea, {
+      animation: 350
+    })
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
