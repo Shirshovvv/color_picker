@@ -11,7 +11,7 @@ body {
   padding: 20px;
   position: relative;
 }
-.color__tablition {
+.color__table {
   max-width: 697px;
   background: #313131;
   border-radius: 20px;
@@ -27,32 +27,32 @@ body {
   column-gap: 23px;
   align-items: center;
 }
-.color__tablition_close {
+.color__table_close {
   width: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.color__tablition_ttl {
+.color__table_ttl {
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
   color: #FFFFFF;
   text-align: center;
 }
-.color__tablition_block,
-.color__tablition-items {
+.color__table_block,
+.color__table-items {
   display: grid;
   row-gap: 1px;
 }
-.color__tablition_values {
+.color__table_values {
   margin-top: 25px;
   grid-template-columns: repeat(6, 1fr);
   display: grid;
   color: #FFFFFF;
   column-gap: 1px;
 }
-.color__tablition_values-item {
+.color__table_values-item {
   padding: 16px;
   font-weight: 600;
   font-size: 18px;
@@ -60,17 +60,17 @@ body {
   color: #FFFFFF;
   background: linear-gradient(0deg, #424242, #424242), #FFFFFF;
 }
-.color__tablition_item {
+.color__table_item {
   cursor: grab;
   grid-template-columns: repeat(6, 1fr);
   display: grid;
   column-gap: 1px;
   transition: all 0.3s;
 }
-.color__tablition_item.change_item {
+.color__table_item.change_item {
   border: 1px solid #53CBF1;
 }
-.color__tablition_item-body {
+.color__table_item-body {
   padding: 18px 15px;
   background: linear-gradient(0deg, #424242, #424242), #FFFFFF;
   font-weight: 400;
@@ -80,7 +80,7 @@ body {
   align-items: center;
   color: #BFBFBF;
 }
-.color__tablition_item-body.color {
+.color__table_item-body.color {
   padding: 7px 25px;
   display: flex;
   justify-content: center;
@@ -91,8 +91,8 @@ body {
   width: 41px;
   background: #86EAE9;
 }
-.color__tablition_item-body.changeBtn,
-.color__tablition_item-body.deleteBtn {
+.color__table_item-body.changeBtn,
+.color__table_item-body.deleteBtn {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -108,17 +108,17 @@ body {
   stroke: #53CBF1;
   transition: all 0.3s;
 }
-.color__tablition_item-body.changeBtn svg,
-.color__tablition_item-body.deleteBtn svg {
+.color__table_item-body.changeBtn svg,
+.color__table_item-body.deleteBtn svg {
   pointer-events: none;
 }
-.color__tablition_btn {
+.color__table_btn {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 30px;
 }
-.color__tablition_btn button {
+.color__table_btn button {
   cursor: pointer;
   border: 1px solid #53CBF1;
   background: transparent;
@@ -357,7 +357,7 @@ body {
   color: #FFFFFF;
 }
 @media(max-width:1024px){
-  .color__tablition {
+  .color__table {
     width: 100%;
     max-width: 100%;
   }
@@ -380,25 +380,25 @@ body {
   }
 }
 @media(max-width:600px) {
-  .color__tablition_values-item {
+  .color__table_values-item {
     font-size: 12px;
     padding: 8px;
   }
-  .color__tablition_item-body.color {
+  .color__table_item-body.color {
     padding: 7px 8px;
   }
-  .color__tablition_item-body {
+  .color__table_item-body {
     padding: 7px 8px;
   }
 }
 @media(max-width:370px) {
-  .color__tablition_values-item {
+  .color__table_values-item {
     padding: 3px;
   }
-  .color__tablition_item-body.color {
+  .color__table_item-body.color {
     padding: 7px 3px;
   }
-  .color__tablition_item-body {
+  .color__table_item-body {
     padding: 7px 3px;
   }
 }

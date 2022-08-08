@@ -23,35 +23,35 @@
 </head>
 <body>
   <div class="container">
-    <div class="color__tablition">
-      <div class="color__tablition_ttl">Таблица цветов</div>
+    <div class="color__table">
+      <div class="color__table_ttl">Таблица цветов</div>
       <div class="save-and-close__block">
-        <div class="color__tablition_save">
+        <div class="color__table_save">
           <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M14 4.49323V14H1V1H10.1985L14 4.49323ZM10.5882 0L15 4.05405V15H0V0H10.5882Z" fill="#8D8D8D"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M11 10H4V14H11V10ZM3 9V15H12V9H3Z" fill="#8D8D8D"/>
           </svg>
         </div>
-       <div class="color__tablition_close">
+       <div class="color__table_close">
         <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="1.06064" height="11.6671" transform="matrix(0.707115 0.707099 -0.707115 0.707099 8.25 0)" fill="#777777"/>
           <rect width="1.06064" height="11.6671" transform="matrix(-0.707114 0.707099 -0.707114 -0.707099 8.99988 8.25)" fill="#777777"/>
         </svg>
        </div>
       </div>
-      <div class="color__tablition_block">
-        <div class="color__tablition_values">
-          <div class="color__tablition_values-item color">Цвет</div>
-          <div class="color__tablition_values-item name">Название</div>
-          <div class="color__tablition_values-item type">Тип</div>
-          <div class="color__tablition_values-item colorCode">Код</div>
-          <div class="color__tablition_values-item change">Изменить</div>
-          <div class="color__tablition_values-item delete">Удалить</div>
+      <div class="color__table_block">
+        <div class="color__table_values">
+          <div class="color__table_values-item color">Цвет</div>
+          <div class="color__table_values-item name">Название</div>
+          <div class="color__table_values-item type">Тип</div>
+          <div class="color__table_values-item colorCode">Код</div>
+          <div class="color__table_values-item change">Изменить</div>
+          <div class="color__table_values-item delete">Удалить</div>
         </div>
-        <color-tablition></color-tablition>
-        <!-- <div class="color__tablition-items"></div> -->
+        <color-table></color-table>
+        <!-- <div class="color__table-items"></div> -->
       </div>
-      <div class="color__tablition_btn">
+      <div class="color__table_btn">
         <button>Добавить цвет</button>
       </div>
     </div>
@@ -94,7 +94,7 @@
   </script>
   <script src="main.js"></script>
   <script>
-    const dragArea = document.querySelector('.color__tablition-items');
+    const dragArea = document.querySelector('.color__table-items');
     new Sortable(dragArea, {
       animation: 350
     })
