@@ -48,7 +48,8 @@
           <div class="color__tablition_values-item change">Изменить</div>
           <div class="color__tablition_values-item delete">Удалить</div>
         </div>
-        <div class="color__tablition-items"></div>
+        <color-tablition></color-tablition>
+        <!-- <div class="color__tablition-items"></div> -->
       </div>
       <div class="color__tablition_btn">
         <button>Добавить цвет</button>
@@ -91,12 +92,12 @@
       }
     });
   </script>
+  <script src="main.js"></script>
   <script>
     const dragArea = document.querySelector('.color__tablition-items');
     new Sortable(dragArea, {
       animation: 350
     })
   </script>
-  <script src="main.js"></script>
 </body>
 </html>

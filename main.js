@@ -1,3 +1,12 @@
+// ---------------------создание кастомного элемента--------------
+class ColorTablitionCustom extends HTMLElement {
+    constructor() {
+        super();
+        this.innerHTML = `<div class="color__tablition-items"></div>`
+      }
+}
+customElements.define("color-tablition", ColorTablitionCustom);
+
 // ------------------переменные отвечающие за селектор цвета------------------------------
 const colorSelectorWrapper = document.querySelector('.color__selector_wrp')
 const colorSelector = document.querySelector('.color__selector')
